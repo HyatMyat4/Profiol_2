@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = { 
     darkmode : true ,
-    starmode : false
+    starmode : true
 }
 export const Actionslice = createSlice({
     name: 'actionslice',
