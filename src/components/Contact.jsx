@@ -6,11 +6,11 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { BsCircleFill } from "react-icons/bs";
 import { darkmodeC } from "../../setting/actionslice";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { CiPaperplane } from "react-icons/ci";
 
 const Contact = () => {
-  const darklight = useSelector(darkmodeC)
+  const darklight = useSelector(darkmodeC);
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -36,8 +36,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_0gva659',
-        'template_cuhw4lb',
+        "service_0gva659",
+        "template_cuhw4lb",
         {
           from_name: form.name,
           to_name: "HyatMyat",
@@ -45,7 +45,7 @@ const Contact = () => {
           to_email: "hyatmyat79@gmail.com",
           message: form.message,
         },
-        '3GC0I1sssgFFHq94x'
+        "3GC0I1sssgFFHq94x"
       )
       .then(
         () => {
@@ -68,75 +68,94 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={` flex xl:flex-row flex-col-reverse  overflow-hidden`}
-    >
+    <div className={` flex xl:flex-row flex-col-reverse  overflow-hidden`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className={` ${darklight ? 'bg-[#1E2439]' : ' bg-slate-300'}  p-[20px] rounded-[7px]`}
-      >        
-          <div className="w-full h-auto  frc justify-start pb-[20px]">
-            <BsCircleFill className="text-rose-500 mr-[8px]" />
-            <BsCircleFill className="text-[#FEBC2E] mr-[8px]" />
-            <BsCircleFill className="text-[#27C83F]" />
-          </div>
+        className={` ${
+          darklight ? "bg-[#1E2439]" : " bg-slate-300"
+        }  p-[20px] rounded-[7px]`}
+      >
+        <div className="w-full h-auto  frc justify-start pb-[20px]">
+          <BsCircleFill className="text-rose-500 mr-[8px]" />
+          <BsCircleFill className="text-[#FEBC2E] mr-[8px]" />
+          <BsCircleFill className="text-[#27C83F]" />
+        </div>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className=' flex flex-col gap-4'
+          className=" flex flex-col gap-4"
         >
-          <label className='flex flex-col'>
-            <span className=' font-medium monospace mb-4 text-[17px] text-teal-500 '>Your Name</span>
+          <label className="flex flex-col">
+            <span className=" font-medium monospace mb-4 text-[17px] text-teal-500 ">
+              Your Name
+            </span>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               value={form.name}
               onChange={handleChange}
-              id='font'
+              id="font"
               placeholder="What's your good name?"
-              className={` ${darklight ? 'bg-[#474c62] placeholder:text-slate-100 text-white ' 
-              : 'bg-slate-100 placeholder:text-[#1f212a] text-[#1f212a]'} py-4 px-6  rounded-lg outline-none border-none font-medium`}
+              className={` ${
+                darklight
+                  ? "bg-[#474c62] placeholder:text-slate-100 text-white "
+                  : "bg-slate-100 placeholder:text-[#1f212a] text-[#1f212a]"
+              } py-4 px-6  rounded-lg outline-none border-none font-medium`}
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-teal-500 font-medium text-[17px] monospace mb-4'>Your email</span>
+          <label className="flex flex-col">
+            <span className="text-teal-500 font-medium text-[17px] monospace mb-4">
+              Your email
+            </span>
             <input
-              type='email'
-              name='email'
-              id='font'
+              type="email"
+              name="email"
+              id="font"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className={` ${darklight ? 'bg-[#474c62] placeholder:text-slate-100 text-white ' 
-              : 'bg-slate-100 placeholder:text-[#1f212a] text-[#1f212a]'}  py-4 px-6  rounded-lg outline-none border-none font-medium`}
+              className={` ${
+                darklight
+                  ? "bg-[#474c62] placeholder:text-slate-100 text-white "
+                  : "bg-slate-100 placeholder:text-[#1f212a] text-[#1f212a]"
+              }  py-4 px-6  rounded-lg outline-none border-none font-medium`}
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-teal-500 text-[17px] font-medium mb-4 monospace '>Your Message</span>
+          <label className="flex flex-col">
+            <span className="text-teal-500 text-[17px] font-medium mb-4 monospace ">
+              Your Message
+            </span>
             <textarea
               rows={7}
-              id='font'
-              name='message'
+              id="font"
+              name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
-              className={` ${darklight ? 'bg-[#474c62] placeholder:text-slate-100 text-white ' 
-              : 'bg-slate-100 placeholder:text-[#1f212a] text-[#1f212a]'} py-4 px-6 resize-none  rounded-lg outline-none border-none font-medium`}
+              placeholder="What you want to say?"
+              className={` ${
+                darklight
+                  ? "bg-[#474c62] placeholder:text-slate-100 text-white "
+                  : "bg-slate-100 placeholder:text-[#1f212a] text-[#1f212a]"
+              } py-4 px-6 resize-none  rounded-lg outline-none border-none font-medium`}
             />
           </label>
 
           <button
-            type='submit'
-            id='font'
+            type="submit"
+            id="font"
             className={`  w-[180px] h-[50px] rounded-[7px] outline-none frc   justify-center bg-teal-500 
              text-slate-100     shadow-lg  hover:scale-95 transition-all duration-75 `}
           >
-            {loading ? "Sending..." : "Send"}<CiPaperplane className={`ml-[5px] text-[25px] ${loading ? ' animate-pulse' : ''}`}/>
+            {loading ? "Sending..." : "Send"}
+            <CiPaperplane
+              className={`ml-[5px] text-[25px] ${
+                loading ? " animate-pulse" : ""
+              }`}
+            />
           </button>
         </form>
       </motion.div>
-
     </div>
   );
 };

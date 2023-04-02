@@ -1,17 +1,17 @@
-import React from 'react'
-import { useParams  } from 'react-router-dom'
-import NavBar from '../components/NavBar';
+import React from "react";
+import { useParams } from "react-router-dom";
+import NavBar from "../components/NavBar";
 import { Projectdata } from "../constants";
 import { useEffect, useState } from "react";
 import Main from "./Main";
 import Left from "./Left";
 import Right from "./Right";
 import { darkmodeC } from "../../setting/actionslice";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function ProjectDetail() {
-  const darklight = useSelector(darkmodeC)
-  const {id} =useParams() 
+  const darklight = useSelector(darkmodeC);
+  const { id } = useParams();
   const [data, setdata] = useState();
   const [ifreamload, setifreamload] = useState(false);
 
@@ -29,16 +29,22 @@ function ProjectDetail() {
     }
   }, [id]);
   return (
-    <div className={`w-full h-screen ${darklight ? 'bg-[#191F2F]' : 'bg-[#eee]'} z-0  `}>
-     
-     <NavBar/>
-    <div id='scroolbar-hidden' className="w-full h-[93vh] frc justify-between overflow-y-scroll">
-      <Left data={data} />
-      <Main ifreamload={ifreamload} data={data} />
-      <Right />
+    <div
+      className={`w-full h-screen ${
+        darklight ? "bg-[#191F2F]" : "bg-[#eee]"
+      } z-0  `}
+    >
+      <NavBar />
+      <div
+        id="scroolbar-hidden"
+        className="w-full h-[93vh] frc justify-between overflow-y-scroll"
+      >
+        <Left data={data} />
+        <Main ifreamload={ifreamload} data={data} />
+        <Right />
+      </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default ProjectDetail
+export default ProjectDetail;

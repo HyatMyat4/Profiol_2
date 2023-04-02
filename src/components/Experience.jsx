@@ -91,7 +91,10 @@ const ExperienceCard = ({ experience }) => {
           <GoMarkGithub className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
         </a>
 
-        <Link to={`ProjectDetail/${experience.PROJECT_SHORT_NAME}`} className="w-auto z-50 relative  group">
+        <Link
+          to={`ProjectDetail/${experience.PROJECT_SHORT_NAME}`}
+          className="w-auto z-50 relative  group"
+        >
           <div
             className="w-auto text-[10px] text-white absolute left-[-13px] hidden group-hover:flex top-[-25px] animate-slideup 
                                rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] "
@@ -123,5 +126,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
-

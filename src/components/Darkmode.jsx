@@ -2,12 +2,16 @@ import React from "react";
 import { RiSunFill } from "react-icons/ri";
 import { BsFillMoonFill } from "react-icons/bs";
 import { darkmodeEngin, darkmodeC } from "../../setting/actionslice";
-import { useDispatch , useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 function Darkmode() {
-    const darklight = useSelector(darkmodeC)
-    const dispatch = useDispatch()
+  const darklight = useSelector(darkmodeC);
+  const dispatch = useDispatch();
   return (
-    <div className={`Header-icon hover:bg-slate-200 animate-slowfade shadow-lg ${darklight ? "shadow-cyan-500/50" : ""} hover:scale-100 z-[99999] cursor-pointer `}>
+    <div
+      className={`Header-icon hover:bg-slate-200 animate-slowfade shadow-lg ${
+        darklight ? "shadow-cyan-500/50" : ""
+      } hover:scale-100 z-[99999] cursor-pointer `}
+    >
       {darklight ? (
         <RiSunFill
           onClick={() => dispatch(darkmodeEngin(false))}

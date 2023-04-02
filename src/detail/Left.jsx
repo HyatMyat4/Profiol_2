@@ -1,7 +1,7 @@
 import React from "react";
 import { GoMarkGithub } from "react-icons/go";
 import { VscGithubAlt } from "react-icons/vsc";
-function Left({ data } ) {
+function Left({ data }) {
   return (
     <div className="w-[100px]  h-[93vh] hidden 1200:flex  z-[40] fcc  animate-slideup42 items-center justify-end fixed bottom-0">
       <a

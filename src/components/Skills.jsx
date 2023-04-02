@@ -7,11 +7,9 @@ export default function Skills() {
       id="Skills"
       className="w-full h-auto 400:h-[93vh]   frc  justify-center my-[40px]  400:my-0 "
     >
-      <div  className="w-full h-full fcc  items-start justify-center">
+      <div className="w-full h-full fcc  items-start justify-center">
         <div className="w-full h-[60px] flex flex-row items-center ">
-          <span className="text-[25px] mr-[10px] font-bold ">
-            S k i l l s
-          </span>
+          <span className="text-[25px] mr-[10px] font-bold ">S k i l l s</span>
           <div className="w-[350px] h-[1px] hidden 600:flex bg-teal-500 mt-[5px]"></div>
         </div>
         <div className="w-full h-auto rounded-[5px]  fcc items-start  cursor-pointer bg-[#282A36] mb-[15px]">
@@ -20,27 +18,44 @@ export default function Skills() {
             <BsCircleFill className="text-[#FEBC2E] mr-[8px]" />
             <BsCircleFill className="text-[#27C83F]" />
           </div>
-          <div  className="w-full h-auto fcc   items-start">
+          <div className="w-full h-auto fcc   items-start">
             <span className="w-full h-auto px-[18px] text-[17px] text-white ">
-              <span id='font' className=" text-pink-600 font-bold  text-[13px] 550:text-[15px] 800:text-[16px]"> const </span>
-              <span id='font' className="  text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]">Frontend</span>{" "}
+              <span
+                id="font"
+                className=" text-pink-600 font-bold  text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
+                {" "}
+                const{" "}
+              </span>
+              <span
+                id="font"
+                className="  text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
+                Frontend
+              </span>{" "}
               <span className=" text-orange-600">=</span>
               <span className=" text-blue-600"> [ </span>{" "}
-              <span id='font' className="text-teal-400  text-[17px] hidden 550:inline">
+              <span
+                id="font"
+                className="text-teal-400  text-[17px] hidden 550:inline"
+              >
                 <Typewriter
                   words={[
                     "Html , Css , Mui , TailWind , Javascript , React , Redux , ReactQuery",
                   ]}
                   loop={true}
                   cursor
-                  id='font'
+                  id="font"
                   cursorStyle="_"
                   typeSpeed={90}
                   deleteSpeed={70}
                   delaySpeed={4000}
                 />
               </span>
-              <span id='font' className="text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px] flex 550:hidden">
+              <span
+                id="font"
+                className="text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px] flex 550:hidden"
+              >
                 'Html , Css , Mui , TailWind , Javascript , React , Redux ,
                 ReactQuery'
               </span>
@@ -91,11 +106,25 @@ export default function Skills() {
           </div>
           <div className="w-full h-auto fcc  items-start">
             <span className="w-full h-auto px-[18px] text-[17px] text-white ">
-              <span id='font' className=" text-pink-600 font-bold text-[13px] 550:text-[15px] 800:text-[16px] "> const </span>
-              <span id='font' className="  text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]">Backend</span>{" "}
+              <span
+                id="font"
+                className=" text-pink-600 font-bold text-[13px] 550:text-[15px] 800:text-[16px] "
+              >
+                {" "}
+                const{" "}
+              </span>
+              <span
+                id="font"
+                className="  text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
+                Backend
+              </span>{" "}
               <span className=" text-orange-600">=</span>
               <span className=" text-blue-600"> [ </span>
-              <span id='font' className="text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]">
+              <span
+                id="font"
+                className="text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
                 {" "}
                 Nodejs <span className=" text-white"> , </span> Express
                 <span className=" text-white"> ,</span> MongoDB{" "}
@@ -143,14 +172,26 @@ export default function Skills() {
           </div>
           <div className="w-full h-auto fcc  items-start">
             <span className="w-full h-auto px-[18px] text-[17px] text-white ">
-              <span id='font' className=" text-pink-600 font-bold text-[13px] 550:text-[15px]  800:text-[16px] "> const </span>
-              <span id='font' className="  text-teal-400   text-[13px] 550:text-[15px] 800:text-[16px]">
+              <span
+                id="font"
+                className=" text-pink-600 font-bold text-[13px] 550:text-[15px]  800:text-[16px] "
+              >
+                {" "}
+                const{" "}
+              </span>
+              <span
+                id="font"
+                className="  text-teal-400   text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
                 MobileApp
               </span>{" "}
               <span className=" text-orange-600">=</span>
               <span className=" text-blue-600"> [ </span>{" "}
               <span className="text-teal-400">
-                <span id='font' className="text-teal-400  inline  group-hover:hidden text-[13px] 550:text-[15px] 800:text-[16px]">
+                <span
+                  id="font"
+                  className="text-teal-400  inline  group-hover:hidden text-[13px] 550:text-[15px] 800:text-[16px]"
+                >
                   {" "}
                   Dart <span className=" text-white"> , </span> Flutter
                   <span className=" text-white"> ,</span> ReactNative{" "}
@@ -160,24 +201,60 @@ export default function Skills() {
               <span className=" text-blue-600">]</span>
             </span>
             <span className="w-full h-auto px-[18px] text-[17px] text-white ">
-              <span id='font' className=" text-pink-600 font-bold text-[13px] 550:text-[15px] 800:text-[16px] "> const </span>
-              <span id='font' className="  text-teal-400 mt-[10px] text-[13px] 550:text-[15px] 800:text-[16px] ">
+              <span
+                id="font"
+                className=" text-pink-600 font-bold text-[13px] 550:text-[15px] 800:text-[16px] "
+              >
+                {" "}
+                const{" "}
+              </span>
+              <span
+                id="font"
+                className="  text-teal-400 mt-[10px] text-[13px] 550:text-[15px] 800:text-[16px] "
+              >
                 DasktopSoftware
               </span>{" "}
               <span className=" text-orange-600">=</span>
-              <span className=" text-blue-600"> [ </span>{" "}            
-              <span id='font' className="text-teal-400 text-[13px] 550:text-[15px] 800:text-[16px]"> Tauri </span>
+              <span className=" text-blue-600"> [ </span>{" "}
+              <span
+                id="font"
+                className="text-teal-400 text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
+                {" "}
+                Tauri{" "}
+              </span>
               <span className=" text-blue-600">]</span>
             </span>
             <span className="w-full h-auto mt-[2px] px-[18px] text-[17px] text-white ">
-              <span id='font' className=" text-pink-600 font-bold text-[13px] 550:text-[15px] 800:text-[16px] "> const </span>
-              <span id='font' className="  text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]">
+              <span
+                id="font"
+                className=" text-pink-600 font-bold text-[13px] 550:text-[15px] 800:text-[16px] "
+              >
+                {" "}
+                const{" "}
+              </span>
+              <span
+                id="font"
+                className="  text-teal-400  text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
                 FullStack
               </span>{" "}
               <span className=" text-orange-600">=</span>
-              <span className=" text-blue-600"> [ </span>{" "} 
-              <span id='font' className="text-teal-400 text-[13px] 550:text-[15px] 800:text-[16px]"> Next js </span>
-              <span id='font' className="text-teal-400 text-[13px] 550:text-[15px] 800:text-[16px]"> , Docker </span>
+              <span className=" text-blue-600"> [ </span>{" "}
+              <span
+                id="font"
+                className="text-teal-400 text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
+                {" "}
+                Next js{" "}
+              </span>
+              <span
+                id="font"
+                className="text-teal-400 text-[13px] 550:text-[15px] 800:text-[16px]"
+              >
+                {" "}
+                , Docker{" "}
+              </span>
               <span className=" text-blue-600">]</span>
             </span>
             <div className="w-full h-auto frc  justify-around flex-wrap p-[18px] px-[20px]">
@@ -189,7 +266,7 @@ export default function Skills() {
               </div>
               <div className="w-[45px] h-auto hover:animate-ping transition-all duration-75 cursor-pointer m-[10px] mb-0  ">
                 <img src="/reactnative.png" />
-              </div>            
+              </div>
               <div className="w-[35px] h-auto hover:animate-ping transition-all duration-75 cursor-pointer m-[10px] mb-0  ">
                 <img src="/tauri.svg" />
               </div>

@@ -26,30 +26,30 @@
   .fcc {
     @apply flex  flex-col items-center;
   }
-  .Header-icon{
-      @apply p-[10px] shadow-lg rounded-full hover:scale-110 hover:bg-orange-400  cursor-pointer transition-all duration-75 ease-in
+  .Header-icon {
+    @apply p-[10px] shadow-lg rounded-full hover:scale-110 hover:bg-orange-400  cursor-pointer transition-all duration-75 ease-in;
   }
-  .slideleft{
-    @apply    animate-slowfade  600:animate-slideleft2
+  .slideleft {
+    @apply animate-slowfade  600:animate-slideleft2;
   }
-  .slideright{
-    @apply      animate-slowfade  600:animate-slideright2
+  .slideright {
+    @apply animate-slowfade  600:animate-slideright2;
   }
-  .backend{
-    @apply  animate-slideright2
+  .backend {
+    @apply animate-slideright2;
   }
-  .ScaleAnimation{
-    @apply hover:scale-125 transition-all duration-75 cursor-pointer 
+  .ScaleAnimation {
+    @apply hover:scale-125 transition-all duration-75 cursor-pointer;
   }
-  .slideleft{
-    @apply    animate-slowfade  600:animate-slideleft2
+  .slideleft {
+    @apply animate-slowfade  600:animate-slideleft2;
   }
-  .slideright{
-    @apply      animate-slowfade  600:animate-slideright2
+  .slideright {
+    @apply animate-slowfade  600:animate-slideright2;
   }
-}    
-html{
-scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 #monospace {
   font-family: "Share Tech Mono", monospace;
@@ -60,19 +60,18 @@ scroll-behavior: smooth;
 #Roboto {
   font-family: "Roboto", sans-serif;
 }
-#font{
-    font-family: 'Square Peg', cursive;
+#font {
+  font-family: "Square Peg", cursive;
 }
 #cutomscoll::-webkit-scrollbar {
-  width: 6px; 
-  
+  width: 6px;
 }
 #cutomscoll::-webkit-scrollbar-track {
-  background:  black;
+  background: black;
 }
 
 #cutomscoll::-webkit-scrollbar-thumb {
-  background:    #2DD4BF;
+  background: #2dd4bf;
   z-index: 90;
   border-radius: 8px;
   cursor: pointer;
@@ -86,8 +85,6 @@ scroll-behavior: smooth;
 #scroolbar-hidden::-webkit-scrollbar {
   display: none;
 }
-
-
 
 * {
   margin: 0;

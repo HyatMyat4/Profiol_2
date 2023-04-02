@@ -15,8 +15,8 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-    <Route path="/" element={<App />} />
-    <Route path="ProjectDetail/:id" element={<ProjectDetail />} />
+      <Route path="/" element={<App />} />
+      <Route path="ProjectDetail/:id" element={<ProjectDetail />} />
     </>
   )
 );
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-        <RouterProvider router={router} />      
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );

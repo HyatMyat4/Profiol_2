@@ -4,12 +4,11 @@ import { BsBoxArrowUpRight, BsGear } from "react-icons/bs";
 import { GoMarkGithub } from "react-icons/go";
 import { Projectdata } from "../constants/index";
 import { darkmodeC } from "../../setting/actionslice";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 function Project() {
-    const darklight = useSelector(darkmodeC)
+  const darklight = useSelector(darkmodeC);
   return (
     <div id="Projects" className="mt-[20px] 600:mt-0">
       {Projectdata.map((data) => (
@@ -18,12 +17,17 @@ function Project() {
           className="w-full 850:w-[801px] 400:h-[93vh] frc my-[40px]  400:my-0  m-auto  "
         >
           <div
-           
-            className={`w-full h-auto ${darklight ? 'bg-[#1e2439]' : 'bg-slate-200'}   rounded-[5px] shadow-lg `}
+            className={`w-full h-auto ${
+              darklight ? "bg-[#1e2439]" : "bg-slate-200"
+            }   rounded-[5px] shadow-lg `}
           >
             <div className="w-[98%] h-auto rounded-[5px] relative group overflow-hidden  cursor-pointer  m-auto my-[8px]">
               <div className="w-full h-full   translate-x-[290px]  absolute rotate-[-55deg]  hidden   group-hover:inline   ">
-                <div className={`w-full h-full hidden 800:flex ${darklight ? 'bg-[#000000e2]' : 'bg-slate-200'}    relative   animate-slidelefttranfrom  z-50 frc justify-center  `}>
+                <div
+                  className={`w-full h-full hidden 800:flex ${
+                    darklight ? "bg-[#000000e2]" : "bg-slate-200"
+                  }    relative   animate-slidelefttranfrom  z-50 frc justify-center  `}
+                >
                   <div
                     className={`${
                       data.js === "" ? "hidden" : ""
@@ -54,15 +58,14 @@ function Project() {
                   </div>
                   <div
                     className={`w-[50px] ${
-                      data.mui === ""  ? " opacity-0" : ""
+                      data.mui === "" ? " opacity-0" : ""
                     } h-auto rotate-[55deg] translate-y-[0px] translate-x-[105px]`}
                   >
-                     {
-                      data.mui === "/mui.png" ?
+                    {data.mui === "/mui.png" ? (
                       <img src="/mui.png" className="ScaleAnimation" />
-                      : <img src="/reactquery.png" className="ScaleAnimation" />
-                     }
-                    
+                    ) : (
+                      <img src="/reactquery.png" className="ScaleAnimation" />
+                    )}
                   </div>
                   <div
                     className={`w-[50px] h-auto ${
@@ -152,10 +155,7 @@ function Project() {
               <img src={data.PROJECT_IMG} className=" rounded-[5px] " />
             </div>
             <div className="p-[20px] pt-[10px] ">
-              <span
-                
-                className=" animate-slideleft2  text-[16px] 550:text-[18px] 800:text-[20px] monospace text-teal-400"
-              >
+              <span className=" animate-slideleft2  text-[16px] 550:text-[18px] 800:text-[20px] monospace text-teal-400">
                 {data.PROJECT_NAME}
               </span>
               <p className="my-[20px] monospace text-[12px] 300:text-[13px] 550:text-[15px] 800:text-[16px]">
