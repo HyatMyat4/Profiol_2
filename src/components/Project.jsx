@@ -1,11 +1,14 @@
 import React from "react";
 import { VscGithubAlt } from "react-icons/vsc";
 import { BsBoxArrowUpRight, BsGear } from "react-icons/bs";
+import { HiOutlineExclamation} from "react-icons/hi";
 import { GoMarkGithub } from "react-icons/go";
 import { Projectdata } from "../constants/index";
 import { darkmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
+
 
 function Project() {
   const darklight = useSelector(darkmodeC);
@@ -175,7 +178,12 @@ function Project() {
                 ))}
               </div>
               <div className="w-[95%] h-[1px] bg-teal-800 m-auto "></div>
-              <div className="w-full h-[60px] frc justify-end">
+              <div className="w-full h-[60px] frc  justify-between">
+                <Link to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`} className="ml-[15px] frc justify-center animate-slideleft opacity-[0.7] hover:underline cursor-pointer  " >
+                   <HiOutlineExclamation className=" animate-pulse text-[20px] text-rose-600"/>
+                   <span id='monospace'  className="ml-[5px] animate-pulse text-[12px] ">recommend watching the project video.</span>
+                </Link>
+                <div className="w-auto h-auto frc  justify-between">
                 <a
                   href={data.Frontend_Repo_Link}
                   className="w-auto relative  group"
@@ -212,6 +220,7 @@ function Project() {
                   </div>
                   <BsBoxArrowUpRight className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
                 </Link>
+                </div>
               </div>
             </div>
           </div>
