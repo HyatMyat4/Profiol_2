@@ -17,6 +17,7 @@ function Project() {
       {Projectdata.map((data) => (
         <section
           id={data.PROJECT_SHORT_NAME}
+          key={data.PROJECT_SHORT_NAME}
           className="w-full 850:w-[801px] 400:h-[93vh] frc my-[40px]  400:my-0  m-auto  "
         >
           <div
