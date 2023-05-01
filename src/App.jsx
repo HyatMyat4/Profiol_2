@@ -10,21 +10,16 @@ function App() {
   const darklight = useSelector(darkmodeC);
 
 
-  const White_Spac = document.getElementById("facebook")
 
   const onScrollChange = () => {
-    const White_Spac = document.getElementById("facebook") 
-    const White_SpacAll = document.querySelectorAll("facebook") 
-    const White_Spac2 = document.getElementsByName("unread_f964b33307509c")
-    const White_SpacQ = document.querySelector("unread_f964b33307509c")
+    const White_Spac = document.getElementsByClassName("fb_dialog_content")
+
     if(White_Spac !==  null){
       White_Spac.style.display = "none";
     } 
     
     console.log(White_Spac,'😀😀')
-    console.log(White_Spac2,'😀😀2')
-    console.log(White_SpacQ,'😀😀Q')
-    console.log(White_SpacAll,'😀😀All')
+
   }
   
 
