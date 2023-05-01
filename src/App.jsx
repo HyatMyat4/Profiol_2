@@ -10,11 +10,10 @@ function App() {
   const darklight = useSelector(darkmodeC);
 
 
-  const White_Spac = document.getElementsByName("unread_f32e95009837c7c")
-  
+  const White_Spac = document.getElementById("facebook")
+
   const onScrollChange = () => {
-    const White_Spac = document.getElementsByName("unread_f32e95009837c7c")
-    const White_Spac2 = document.getElementsByName("greeting_f32e95009837c7c")
+    const White_Spac = document.getElementById("facebook")  
     console.log(White_Spac,'😀😀')
   }
   
