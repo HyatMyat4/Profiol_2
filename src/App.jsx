@@ -5,43 +5,8 @@ import Main from "./components/Main";
 import LeftMain from "./components/LeftMain";
 import RightMain from "./components/RightMain";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-import { useEffect } from "react";
 function App() {
-  const darklight = useSelector(darkmodeC);
-
-
-
-  const onScrollChange = () => {
-    const White_Spac = document.getElementsByClassName("fb_dialog_content")
-
-    if(White_Spac !==  null){
-      White_Spac.style.display = "none";
-    } 
-    
-    console.log(White_Spac,'😀😀')
-
-  }
-  
-
-   
-
-    
-    useEffect(() => {
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          onScrollChange()
-        });
-      });
-  
-      const hiddenElements = document.querySelectorAll("section");
-  
-      hiddenElements.forEach((el) => observer.observe(el));
-  
-    }, []);
-  
-
-  
+  const darklight = useSelector(darkmodeC);   
   return (
     <div
       className={`w-full h-screen ${
