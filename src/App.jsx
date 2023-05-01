@@ -5,13 +5,37 @@ import Main from "./components/Main";
 import LeftMain from "./components/LeftMain";
 import RightMain from "./components/RightMain";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-
+import { useEffect } from "react";
 function App() {
   const darklight = useSelector(darkmodeC);
 
+
   const White_Spac = document.getElementsByName("unread_f32e95009837c7c")
-  const White_Spac2 = document.getElementsByName("greeting_f32e95009837c7c")
-  console.log(White_Spac,'😀😀')
+  
+  const onScrollChange = () => {
+    const White_Spac = document.getElementsByName("unread_f32e95009837c7c")
+    const White_Spac2 = document.getElementsByName("greeting_f32e95009837c7c")
+    console.log(White_Spac,'😀😀')
+  }
+  
+
+   
+
+    
+    useEffect(() => {
+      if(White_Spac.length === 0){
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          onScrollChange()
+        });
+      });
+  
+      const hiddenElements = document.querySelectorAll("section");
+  
+      hiddenElements.forEach((el) => observer.observe(el));
+    }
+    }, []);
+  
 
   
   return (
