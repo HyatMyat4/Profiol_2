@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Main from "./components/Main";
 import LeftMain from "./components/LeftMain";
 import RightMain from "./components/RightMain";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 function App() {
   const darklight = useSelector(darkmodeC);
@@ -24,10 +24,7 @@ function App() {
         <RightMain />
       </div>
        
-         <MessengerCustomerChat
-            pageId="113485224987738"
-            appId="735689564765924"        
-        />
+    
     </div>
   );
 }
