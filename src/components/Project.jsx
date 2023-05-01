@@ -7,7 +7,7 @@ import { Projectdata } from "../constants/index";
 import { darkmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import { Typewriter } from "react-simple-typewriter";
 
 
 function Project() {
@@ -180,8 +180,21 @@ function Project() {
               <div className="w-[95%] h-[1px] bg-teal-800 m-auto "></div>
               <div className="w-full h-[60px] frc  justify-between">
                 <Link to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`} className="ml-[15px] frc justify-center animate-slideleft opacity-[0.7] hover:underline cursor-pointer  " >
-                   <HiOutlineExclamation className=" animate-pulse text-[20px] text-rose-600"/>
-                   <span id='monospace'  className="ml-[5px] animate-pulse text-[12px] ">recommend watching the project video.</span>
+                   <HiOutlineExclamation className=" animate-pulse text-[20px] text-rose-600"/> 
+                   <div id='monospace'  className="ml-[5px] font-medium animate-pulse text-[12px] monospace ">
+                   <Typewriter
+                  words={[
+                    "recommend watching the project video.",
+                  ]}
+                  loop={true}
+                  cursor
+                  id="monospace"
+                  cursorStyle="_"
+                  typeSpeed={90}
+                  deleteSpeed={70}
+                  delaySpeed={4000}
+                />
+                   </div>
                 </Link>
                 <div className="w-auto h-auto frc  justify-between">
                 <a
