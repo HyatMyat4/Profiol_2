@@ -12,8 +12,7 @@ function App() {
   const White_Spac = document.getElementsByName("unread_f32e95009837c7c")
   const White_Spac2 = document.getElementsByName("greeting_f32e95009837c7c")
   console.log(White_Spac,'😀😀')
-  White_Spac.style.display = "none";
-  White_Spac2.style.display = "none";
+
   
   return (
     <div
