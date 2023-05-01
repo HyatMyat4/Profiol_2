@@ -13,7 +13,11 @@ function App() {
   const White_Spac = document.getElementById("facebook")
 
   const onScrollChange = () => {
-    const White_Spac = document.getElementById("facebook")  
+    const White_Spac = document.getElementById("facebook") 
+    if(White_Spac !==  null){
+      White_Spac.style.display = "none";
+    } 
+    
     console.log(White_Spac,'😀😀')
   }
   
@@ -22,7 +26,7 @@ function App() {
 
     
     useEffect(() => {
-      if(White_Spac.length === 0){
+      
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           onScrollChange()
@@ -32,7 +36,7 @@ function App() {
       const hiddenElements = document.querySelectorAll("section");
   
       hiddenElements.forEach((el) => observer.observe(el));
-    }
+  
     }, []);
   
 
