@@ -28,13 +28,14 @@ function ProjectDetail() {
       iframe.addEventListener("load", handleLoad, true);
     }
   }, [id]);
+  
   return (
     <div
       className={`w-full h-screen ${
         darklight ? "bg-[#191F2F]" : "bg-[#eee]"
       } z-0  `}
     >
-      <NavBar />
+      <NavBar hidden={true} />
       <div
         id="scroolbar-hidden"
         className="w-full h-[93vh] frc justify-between overflow-y-scroll"

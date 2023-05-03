@@ -1,14 +1,38 @@
 import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
 import { VscTriangleRight, VscTriangleUp } from "react-icons/vsc";
-import { darkmodeC } from "../../setting/actionslice";
+import { darkmodeC , musicmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import Darkmode from "./Darkmode";
 import Starmode from "./Starmode";
-function NavBar() {
+import { Link } from "react-router-dom";
+import MusicMode from "./MusicMode";
+import { useEffect , useRef  } from "react";
+
+function NavBar({ hidden }) {
   const darklight = useSelector(darkmodeC);
   const [pathname, setpathname] = useState("");
+  const music_mode = useSelector(musicmodeC); 
+  const audioRef = useRef();
+
+
+
+
+  useEffect(() => {    
+    music_mode  === true ? audioRef.current.play() : audioRef.current.pause() ;
+  }, [music_mode])
+
+
+
+ 
+
+  const intervalID = setInterval(() => {
+    audioRef.current.play()
+    if(audioRef.current){
+      clearInterval(intervalID)   
+      console.log("is clear")
+    }
+  }, 4000);
 
   useEffect(() => {
     if (window !== undefined) {
@@ -25,12 +49,13 @@ function NavBar() {
       className={`w-full h-[7vh]      shadow-lg ${
         darklight ? "shadow-cyan-500/50" : ""
       }   flex flex-row items-center justify-between  z-[999] `}
-    >
-      <div className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden">
+    > 
+    <audio ref={audioRef} src="../../don_t_wake.mp3"  loop autoPlay />
+      <Link to={"/"} className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden">
         <img src="/reactquery.png" />
-      </div>
-      <div className="w-auto z-[999]  800:w-[500px] group h-[60px] animate-slidedown  rounded-[5px] text-[18px] frc justify-between select-none">
-        <div className="w-full h-full hidden 800:flex frc justify-around ">
+      </Link>
+      <div className={` ${ hidden === true ? " hidden " : ""} w-auto z-[999]  800:w-[500px] group h-[60px] animate-slidedown  rounded-[5px] text-[18px] frc justify-between select-non"`}>
+        <div className={` w-full h-full hidden 800:flex frc justify-around `}>
           <a
             href="#About"
             className={`w-auto h-auto frc monospace ${
@@ -145,11 +170,14 @@ function NavBar() {
           </div>
         </div>
       </div>
-      <div className="mr-[38px] hidden 800:flex">
+      <div className="mr-[38px] flex">
+        <MusicMode/>
         <Starmode />
 
         <Darkmode />
+        
       </div>
+      
     </div>
   );
 }

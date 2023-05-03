@@ -8,10 +8,26 @@ import { darkmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
-
-
+import Spinner from "react-spinkit"
+import { useState } from "react";
 function Project() {
   const darklight = useSelector(darkmodeC);
+  const [ colourData , setcolourData ] = useState("#2DD4BF")
+  
+  function getRandomColor() {
+    // Generate a random number between 0 and 255 for each RGB component
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+  
+    // Return the color in the form of a CSS RGB string
+    setcolourData(`rgb(${r}, ${g}, ${b})`);
+  }
+
+  const intervalID = setInterval(() => {
+    getRandomColor()
+  }, 5000);
+
   return (
     <div id="Projects" className="mt-[20px] 600:mt-0">
       {Projectdata.map((data) => (
@@ -181,8 +197,14 @@ function Project() {
               <div className="w-[95%] h-[1px] bg-teal-800 m-auto "></div>
               <div className="w-full h-[60px] frc  justify-between">
                 <Link to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`} className="ml-[15px] frc justify-center animate-slideleft opacity-[0.7] hover:underline cursor-pointer  " >
-                   <HiOutlineExclamation className=" animate-pulse text-[20px] text-rose-600"/> 
-                   <div id='monospace'  className="ml-[5px] font-medium animate-pulse text-[12px] monospace ">
+                  
+                   <Spinner name='folding-cube'
+                    style={{
+                    height: '20px', // Adjust the height as desired
+                    width: '20px', // Adjust the width as desired
+                  }} fadeIn="none" color={colourData} 
+                  />
+                   <div id='monospace'  className="ml-[10px] font-medium animate-pulse text-[12px] monospace ">
                    <Typewriter
                   words={[
                     "recommend watching the project video.",
@@ -197,7 +219,7 @@ function Project() {
                 />
                    </div>
                 </Link>
-                <div className="w-auto h-auto frc  justify-between">
+                <div className="w-auto h-auto frc   justify-between">
                 <a
                   href={data.Frontend_Repo_Link}
                   className="w-auto relative  group"

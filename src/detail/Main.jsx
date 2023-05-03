@@ -1,9 +1,10 @@
 import React from "react";
 import { BsClock, BsGear } from "react-icons/bs";
-import { DotPulse } from "@uiball/loaders";
 import StarsCanvas from "../components/Stars";
+import Spinner from "react-spinkit"
 
-function Main({ ifreamload, data }) {
+
+function Main({ ifreamload, data }) { 
   return (
     <div className="w-[1000px] h-[93vh] m-auto  z-0   ">
       <StarsCanvas />
@@ -13,10 +14,15 @@ function Main({ ifreamload, data }) {
             ifreamload ? " hidden" : ""
           }`}
         >
-          <DotPulse size={60} speed={1.3} color="#F97316" />
+          <Spinner name='cube-grid'
+            style={{
+            height: '50px', // Adjust the height as desired
+            width: '50px', // Adjust the width as desired
+          }} fadeIn="none" color="#2DD4BF" 
+          />
         </div>
         <div
-          className={`relative overflow-hidden w-full ${
+          className={`relative overflow-hidden w-full  ${
             ifreamload ? "" : "hidden"
           }   frc justify-center pt-[56.25%] m-auto rounded-0 600:rounded-[8px]`}
         >

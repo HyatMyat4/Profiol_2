@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = { 
     darkmode : true ,
-    starmode : true
+    starmode : true ,
+    musicmode : false
 }
 export const Actionslice = createSlice({
     name: 'actionslice',
@@ -14,16 +15,21 @@ export const Actionslice = createSlice({
         },
         starmodeEngin : (state , action) => {
             state.starmode = action.payload
+        },
+        musicmodeEngin : (state , action) => {
+            state.musicmode = action.payload
         }
     } 
 })
 
 export const  {    
     darkmodeEngin,
-    starmodeEngin
+    starmodeEngin,
+    musicmodeEngin
 } = Actionslice.actions
 
 export const  darkmodeC = ( state ) => state.actionslice.darkmode
 export const  starmodeC = ( state ) => state.actionslice.starmode
+export const  musicmodeC = ( state ) => state.actionslice.musicmode
 
 export default Actionslice.reducer;
