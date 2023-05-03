@@ -27,11 +27,7 @@ function NavBar({ hidden }) {
  
 
   const intervalID = setInterval(() => {
-    audioRef.current.play()
-    if(audioRef.current){
-      clearInterval(intervalID)   
-      console.log("is clear")
-    }
+    audioRef.current.play()  
   }, 4000);
 
   useEffect(() => {
@@ -170,7 +166,7 @@ function NavBar({ hidden }) {
           </div>
         </div>
       </div>
-      <div className="mr-[38px] flex">
+      <div className="mr-[38px] hidden 800:flex">
         <MusicMode/>
         <Starmode />
 
