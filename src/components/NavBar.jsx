@@ -30,6 +30,7 @@ function NavBar({ hidden }) {
     audioRef.current.play()  
   }, 4000);
 
+  
   useEffect(() => {
     if (window !== undefined) {
       window.addEventListener("hashchange", () => {
@@ -50,11 +51,11 @@ function NavBar({ hidden }) {
       <Link to={"/"} className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden">
         <img src="/reactquery.png" />
       </Link>
-      <div className={` ${ hidden === true ? " hidden " : ""} w-auto z-[999]  800:w-[500px] group h-[60px] animate-slidedown  rounded-[5px] text-[18px] frc justify-between select-non"`}>
+      <div className={`  w-auto z-[999]  800:w-[500px] group h-[60px] animate-slidedown  rounded-[5px] text-[18px] frc justify-between select-non"`}>
         <div className={` w-full h-full hidden 800:flex frc justify-around `}>
           <a
             href="#About"
-            className={`w-auto h-auto frc monospace ${
+            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
               isActive === "About" ? "text-teal-400 scale-110" : ""
             }  hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer   `}
           >
@@ -67,7 +68,7 @@ function NavBar({ hidden }) {
           </a>
           <a
             href="#Skills"
-            className={`w-auto h-auto frc monospace ${
+            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
               isActive === "Skills" ? "text-teal-400 scale-110" : ""
             }  hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer`}
           >
@@ -80,7 +81,7 @@ function NavBar({ hidden }) {
           </a>
           <a
             href="#Projects"
-            className={`w-auto h-auto frc monospace ${
+            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
               isActive === "Projects" ? "text-teal-400 scale-110" : ""
             } hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer`}
           >
@@ -93,7 +94,7 @@ function NavBar({ hidden }) {
           </a>
           <a
             href="#Contact"
-            className={`w-auto h-auto frc monospace ${
+            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
               isActive === "Contact" ? "text-teal-400 scale-110" : ""
             } hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer`}
           >
@@ -108,6 +109,7 @@ function NavBar({ hidden }) {
 
         <div className="w-auto h-auto frc relative flex 800:hidden  ">
           <div className="mr-[10px] 500:mr-[20px] frc  ">
+            <MusicMode/>
             <Starmode />
             <Darkmode />
           </div>

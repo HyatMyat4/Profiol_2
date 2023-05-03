@@ -126,7 +126,7 @@ const Projectdata = [
     Frontend_Repo_Link: "https://github.com/HyatMyat4/GrapeMedia.git",
     Backend_Repo_Link: "https://github.com/HyatMyat4/SocialMediaBackend-.git",
     PROJECT_VIDEO: "cLKsNVSyPMM",
-    LIVE_MODE: "https://grapemediar.onrender.com/",
+    LIVE_MODE: "",
     PROJECT_TEXT:
       "A Real Time Full Stack SocalMedia application User Can Upload Post With Image , User Can Make Post CRUD Operations & Reaction Feature , Comment CRUD & Contain User Profile CRUD and Friends Add , Remove RealTime Messanger Can send Image,Link,Text",
     USER_LANGUAGE_IMG: [
@@ -517,7 +517,7 @@ const OrderBy = [
     Frontend_Repo_Link: "https://github.com/HyatMyat4/GrapeMedia.git",
     Backend_Repo_Link: "https://github.com/HyatMyat4/SocialMediaBackend-.git",
     PROJECT_VIDEO: "cLKsNVSyPMM",
-    LIVE_MODE: "https://grapemediar.onrender.com/",
+    LIVE_MODE: "",
     PROJECT_TEXT:
       "A Real Time Full Stack SocalMedia application User Can Upload Post With Image , User Can Make Post CRUD Operations & Reaction Feature , Comment CRUD & Contain User Profile CRUD and Friends Add , Remove RealTime Messanger Can send Image,Link,Text",
     USER_LANGUAGE_IMG: [

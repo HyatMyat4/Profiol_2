@@ -39,9 +39,12 @@ function Project() {
           <div
             className={`w-full h-auto ${
               darklight ? "bg-[#1e2439]" : "bg-slate-200"
-            }   rounded-[5px] shadow-lg `}
-          >
-            <div className="w-[98%] h-auto rounded-[5px] relative group overflow-hidden  cursor-pointer  m-auto my-[8px]">
+            }   rounded-[10px] shadow-lg `}
+          > 
+            <div className="w-[98%] h-auto m-auto  overflow-hidden pt-[10px]">
+             <img src="/macbook.png" className="w-[102%] h-auto m-auto  rounded-[5px]  " />
+            </div> 
+            <div className="w-[98%] h-auto rounded-[5px] relative group overflow-hidden  cursor-pointer  m-auto mb-[8px] ">
               <div className="w-full h-full   translate-x-[290px]  absolute rotate-[-55deg]  hidden   group-hover:inline   ">
                 <div
                   className={`w-full h-full hidden 800:flex ${
@@ -170,9 +173,8 @@ function Project() {
                     <img src={data.prisma} className="ScaleAnimation" />
                   </div>
                 </div>
-              </div>
-
-              <img src={data.PROJECT_IMG} className=" rounded-[5px] " />
+              </div>             
+              <img src={data.PROJECT_IMG} className=" rounded-bl-[8px] rounded-br-[8px] " />
             </div>
             <div className="p-[20px] pt-[10px] ">
               <span className=" animate-slideleft2  text-[16px] 550:text-[18px] 800:text-[20px] monospace text-teal-400">

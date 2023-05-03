@@ -72,7 +72,7 @@ function Main({ ifreamload, data }) {
           href={data?.LIVE_MODE}
           id="monospace"
           className={`px-[30px] ${
-            data?.LIVE_MODE !== "" ? "" : "hidden"
+            data?.LIVE_MODE === "" ? "hidden" : ""
           } shadow-lg  py-[10px]  rounded-[5px] text-white bg-teal-400 text-[20px] hover:scale-110 transition-all duration-100 cursor-pointer`}
         >
           Live Mode
@@ -80,7 +80,7 @@ function Main({ ifreamload, data }) {
         <div
           id="monospace"
           className={`px-[30px] ${
-            data?.LIVE_MODE !== "" ? " hidden" : ""
+            data?.LIVE_MODE === "" ? " " : "hidden"
           } py-[10px] frc rounded-[5px] text-rose-500 bg-gray-700 opacity-[0.5] text-[20px] hover:scale-110 transition-all duration-100 cursor-pointer`}
         >
           Soorty Live Mode Expired <BsClock className="ml-[10px]" />
