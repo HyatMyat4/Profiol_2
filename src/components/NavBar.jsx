@@ -46,7 +46,7 @@ function NavBar({ hidden }) {
         darklight ? "shadow-cyan-500/50" : ""
       }   flex flex-row items-center justify-between  z-[999] `}
     > 
-    <audio ref={audioRef} src="/public/dontwake.mp3"  loop autoPlay />
+    <audio ref={audioRef} src="../../music/dontwake.mp3"  loop autoPlay />
       <Link to={"/"} className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden">
         <img src="/reactquery.png" />
       </Link>
