@@ -198,7 +198,7 @@ function Project() {
               <div className="w-full h-[60px] frc  justify-between">
                 <Link to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`} className="ml-[15px] frc justify-center animate-slideleft opacity-[0.7] hover:underline cursor-pointer  " >
                   
-                   <Spinner name='folding-cube'
+                   <Spinner name='cube-grid'
                     style={{
                     height: '20px', // Adjust the height as desired
                     width: '20px', // Adjust the width as desired
