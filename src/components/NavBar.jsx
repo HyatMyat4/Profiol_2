@@ -19,6 +19,13 @@ function NavBar({ hidden }) {
     music_mode === true ? audioRef.current.play() : audioRef.current.pause();
   }, [music_mode]);
 
+  const intervalID = setInterval(() => {
+    audioRef.current.play();
+    if (music_mode === false) {
+      clearInterval(intervalID);
+    }
+  }, 4000);
+
   useEffect(() => {
     if (window !== undefined) {
       window.addEventListener("hashchange", () => {
@@ -187,11 +194,5 @@ function NavBar({ hidden }) {
 export default NavBar;
 
 /*
-  const intervalID = setInterval(() => {
-    if (music_mode === false) {
-      clearInterval(intervalID);
-    }
-    console.log(audioRef.current, "audioRef.current");
-    audioRef.current.play();
-  }, 4000);
+
   */
