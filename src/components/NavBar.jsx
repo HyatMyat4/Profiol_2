@@ -1,36 +1,24 @@
 import React from "react";
 import { useState } from "react";
 import { VscTriangleRight, VscTriangleUp } from "react-icons/vsc";
-import { darkmodeC , musicmodeC } from "../../setting/actionslice";
+import { darkmodeC, musicmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import Darkmode from "./Darkmode";
 import Starmode from "./Starmode";
 import { Link } from "react-router-dom";
 import MusicMode from "./MusicMode";
-import { useEffect , useRef  } from "react";
+import { useEffect, useRef } from "react";
 
 function NavBar({ hidden }) {
   const darklight = useSelector(darkmodeC);
   const [pathname, setpathname] = useState("");
-  const music_mode = useSelector(musicmodeC); 
+  const music_mode = useSelector(musicmodeC);
   const audioRef = useRef();
 
+  useEffect(() => {
+    music_mode === true ? audioRef.current.play() : audioRef.current.pause();
+  }, [music_mode]);
 
-
-
-  useEffect(() => {    
-    music_mode  === true ? audioRef.current.play() : audioRef.current.pause() ;
-  }, [music_mode])
-
-
-
- 
-
-  const intervalID = setInterval(() => {
-    audioRef.current.play()  
-  }, 4000);
-
-  
   useEffect(() => {
     if (window !== undefined) {
       window.addEventListener("hashchange", () => {
@@ -46,16 +34,28 @@ function NavBar({ hidden }) {
       className={`w-full h-[7vh]      shadow-lg ${
         darklight ? "shadow-cyan-500/50" : ""
       }   flex flex-row items-center justify-between  z-[999] `}
-    > 
-    <audio ref={audioRef} src="https://dl.sndup.net/gdwh/dontwake.mp3"  loop autoPlay />
-      <Link to={"/"} className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden">
+    >
+      <audio
+        ref={audioRef}
+        src="https://dl.sndup.net/gdwh/dontwake.mp3"
+        loop
+        autoPlay
+      />
+      <Link
+        to={"/"}
+        className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden"
+      >
         <img src="/reactquery.png" />
       </Link>
-      <div className={`  w-auto z-[999]  800:w-[500px] group h-[60px] animate-slidedown  rounded-[5px] text-[18px] frc justify-between select-non"`}>
+      <div
+        className={`  w-auto z-[999]  800:w-[500px] group h-[60px] animate-slidedown  rounded-[5px] text-[18px] frc justify-between select-non"`}
+      >
         <div className={` w-full h-full hidden 800:flex frc justify-around `}>
           <a
             href="#About"
-            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
+            className={`w-auto h-auto frc monospace ${
+              hidden === true ? " hidden " : ""
+            } ${
               isActive === "About" ? "text-teal-400 scale-110" : ""
             }  hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer   `}
           >
@@ -68,7 +68,9 @@ function NavBar({ hidden }) {
           </a>
           <a
             href="#Skills"
-            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
+            className={`w-auto h-auto frc monospace ${
+              hidden === true ? " hidden " : ""
+            } ${
               isActive === "Skills" ? "text-teal-400 scale-110" : ""
             }  hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer`}
           >
@@ -81,7 +83,9 @@ function NavBar({ hidden }) {
           </a>
           <a
             href="#Projects"
-            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
+            className={`w-auto h-auto frc monospace ${
+              hidden === true ? " hidden " : ""
+            } ${
               isActive === "Projects" ? "text-teal-400 scale-110" : ""
             } hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer`}
           >
@@ -94,7 +98,9 @@ function NavBar({ hidden }) {
           </a>
           <a
             href="#Contact"
-            className={`w-auto h-auto frc monospace ${ hidden === true ? " hidden " : ""} ${
+            className={`w-auto h-auto frc monospace ${
+              hidden === true ? " hidden " : ""
+            } ${
               isActive === "Contact" ? "text-teal-400 scale-110" : ""
             } hover:text-teal-400 hover:scale-125 transition-all duration-75 cursor-pointer`}
           >
@@ -109,7 +115,7 @@ function NavBar({ hidden }) {
 
         <div className="w-auto h-auto frc relative flex 800:hidden  ">
           <div className="mr-[10px] 500:mr-[20px] frc  ">
-            <MusicMode/>
+            <MusicMode />
             <Starmode />
             <Darkmode />
           </div>
@@ -169,15 +175,23 @@ function NavBar({ hidden }) {
         </div>
       </div>
       <div className="mr-[38px] hidden 800:flex">
-        <MusicMode/>
+        <MusicMode />
         <Starmode />
 
         <Darkmode />
-        
       </div>
-      
     </div>
   );
 }
 
 export default NavBar;
+
+/*
+  const intervalID = setInterval(() => {
+    if (music_mode === false) {
+      clearInterval(intervalID);
+    }
+    console.log(audioRef.current, "audioRef.current");
+    audioRef.current.play();
+  }, 4000);
+  */

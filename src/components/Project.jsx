@@ -1,32 +1,32 @@
 import React from "react";
 import { VscGithubAlt } from "react-icons/vsc";
 import { BsBoxArrowUpRight, BsGear } from "react-icons/bs";
-import { HiOutlineExclamation} from "react-icons/hi";
+import { HiOutlineExclamation } from "react-icons/hi";
 import { GoMarkGithub } from "react-icons/go";
 import { Projectdata } from "../constants/index";
 import { darkmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
-import Spinner from "react-spinkit"
+import Spinner from "react-spinkit";
 import { useState } from "react";
 function Project() {
   const darklight = useSelector(darkmodeC);
-  const [ colourData , setcolourData ] = useState("#2DD4BF")
-  
+  const [colourData, setcolourData] = useState("#2DD4BF");
+
   function getRandomColor() {
     // Generate a random number between 0 and 255 for each RGB component
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-  
+
     // Return the color in the form of a CSS RGB string
     setcolourData(`rgb(${r}, ${g}, ${b})`);
   }
 
   const intervalID = setInterval(() => {
-    getRandomColor()
-  }, 5000);
+    getRandomColor();
+  }, 6000);
 
   return (
     <div id="Projects" className="mt-[20px] 600:mt-0">
@@ -40,10 +40,13 @@ function Project() {
             className={`w-full h-auto ${
               darklight ? "bg-[#1e2439]" : "bg-slate-200"
             }   rounded-[10px] shadow-lg `}
-          > 
+          >
             <div className="w-[98%] h-auto m-auto  overflow-hidden pt-[10px]">
-             <img src="/macbook.png" className="w-[102%] h-auto m-auto  rounded-[5px]  " />
-            </div> 
+              <img
+                src="/macbook.png"
+                className="w-[102%] h-auto m-auto  rounded-[5px]  "
+              />
+            </div>
             <div className="w-[98%] h-auto rounded-[5px] relative group overflow-hidden  cursor-pointer  m-auto mb-[8px] ">
               <div className="w-full h-full   translate-x-[290px]  absolute rotate-[-55deg]  hidden   group-hover:inline   ">
                 <div
@@ -173,8 +176,11 @@ function Project() {
                     <img src={data.prisma} className="ScaleAnimation" />
                   </div>
                 </div>
-              </div>             
-              <img src={data.PROJECT_IMG} className=" rounded-bl-[8px] rounded-br-[8px] " />
+              </div>
+              <img
+                src={data.PROJECT_IMG}
+                className=" rounded-bl-[8px] rounded-br-[8px] "
+              />
             </div>
             <div className="p-[20px] pt-[10px] ">
               <span className=" animate-slideleft2  text-[16px] 550:text-[18px] 800:text-[20px] monospace text-teal-400">
@@ -198,66 +204,72 @@ function Project() {
               </div>
               <div className="w-[95%] h-[1px] bg-teal-800 m-auto "></div>
               <div className="w-full h-[60px] frc  justify-between">
-                <Link to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`} className="ml-[15px] frc justify-center animate-slideleft opacity-[0.7] hover:underline cursor-pointer  " >
-                  
-                   <Spinner name='cube-grid'
-                    style={{
-                    height: '20px', // Adjust the height as desired
-                    width: '20px', // Adjust the width as desired
-                  }} fadeIn="none" color={colourData} 
-                  />
-                   <div id='monospace'  className="ml-[10px] font-medium animate-pulse text-[12px] monospace ">
-                   <Typewriter
-                  words={[
-                    "recommend watching the project video.",
-                  ]}
-                  loop={true}
-                  cursor
-                  id="monospace"
-                  cursorStyle="_"
-                  typeSpeed={90}
-                  deleteSpeed={70}
-                  delaySpeed={4000}
-                />
-                   </div>
-                </Link>
-                <div className="w-auto h-auto frc   justify-between">
-                <a
-                  href={data.Frontend_Repo_Link}
-                  className="w-auto relative  group"
-                >
-                  <div className="w-auto text-[10px] absolute left-[-13px] text-white hidden group-hover:flex top-[-25px] animate-slideup rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] ">
-                    Frontend
-                  </div>
-                  <VscGithubAlt className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
-                </a>
-                <a
-                  href={data.Backend_Repo_Link}
-                  className={`w-auto relative ${
-                    data.Backend_Repo_Link === "" ? "hidden" : " "
-                  } group`}
-                >
-                  <div
-                    className="w-auto text-[10px] absolute left-[-13px] hidden group-hover:flex top-[-25px] animate-slideup 
-                               rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] text-white "
-                  >
-                    Backend
-                  </div>
-                  <GoMarkGithub className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
-                </a>
-
                 <Link
                   to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`}
-                  className="w-auto z-50 relative  group"
+                  className="ml-[15px] frc justify-center animate-slideleft opacity-[0.7] hover:underline cursor-pointer  "
                 >
+                  <Spinner
+                    name="cube-grid"
+                    style={{
+                      height: "20px", // Adjust the height as desired
+                      width: "20px", // Adjust the width as desired
+                    }}
+                    fadeIn="none"
+                    color={colourData}
+                  />
                   <div
-                    className="w-auto text-[10px] text-white absolute left-[-13px] hidden group-hover:flex top-[-25px] animate-slideup 
-                               rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] "
+                    id="monospace"
+                    className="ml-[10px] font-medium animate-pulse text-[12px] monospace "
                   >
-                    Detail
+                    <Typewriter
+                      words={["recommend watching the project video."]}
+                      loop={true}
+                      cursor
+                      id="monospace"
+                      cursorStyle="_"
+                      typeSpeed={90}
+                      deleteSpeed={70}
+                      delaySpeed={4000}
+                    />
                   </div>
-                  <BsBoxArrowUpRight className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
                 </Link>
+                <div className="w-auto h-auto frc   justify-between">
+                  <a
+                    href={data.Frontend_Repo_Link}
+                    className="w-auto relative  group"
+                  >
+                    <div className="w-auto text-[10px] absolute left-[-13px] text-white hidden group-hover:flex top-[-25px] animate-slideup rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] ">
+                      Frontend
+                    </div>
+                    <VscGithubAlt className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
+                  </a>
+                  <a
+                    href={data.Backend_Repo_Link}
+                    className={`w-auto relative ${
+                      data.Backend_Repo_Link === "" ? "hidden" : " "
+                    } group`}
+                  >
+                    <div
+                      className="w-auto text-[10px] absolute left-[-13px] hidden group-hover:flex top-[-25px] animate-slideup 
+                               rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] text-white "
+                    >
+                      Backend
+                    </div>
+                    <GoMarkGithub className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
+                  </a>
+
+                  <Link
+                    to={`ProjectDetail/${data.PROJECT_SHORT_NAME}`}
+                    className="w-auto z-50 relative  group"
+                  >
+                    <div
+                      className="w-auto text-[10px] text-white absolute left-[-13px] hidden group-hover:flex top-[-25px] animate-slideup 
+                               rounded-[20px] bg-black frc pl-[8px] pr-[8px] py-[1px] "
+                    >
+                      Detail
+                    </div>
+                    <BsBoxArrowUpRight className="text-[25px]  text-teal-400  cursor-pointer mr-[25px] ScaleAnimation" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -269,3 +281,10 @@ function Project() {
 }
 
 export default Project;
+
+/*
+git remote add origin https://github.com/HyatMyat4/test.git
+git branch -M main
+git push -u origin main
+git password : lizard7Rd32003
+*/
