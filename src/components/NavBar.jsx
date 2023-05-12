@@ -15,16 +15,16 @@ function NavBar({ hidden }) {
   const music_mode = useSelector(musicmodeC);
   const audioRef = useRef();
 
-  useEffect(() => {
-    music_mode === true ? audioRef.current.play() : audioRef.current.pause();
-  }, [music_mode]);
-
   const intervalID = setInterval(() => {
     audioRef.current.play();
+  }, 4000);
+
+  useEffect(() => {
     if (music_mode === false) {
       clearInterval(intervalID);
     }
-  }, 4000);
+    music_mode === true ? audioRef.current.play() : audioRef.current.pause();
+  }, [music_mode]);
 
   useEffect(() => {
     if (window !== undefined) {
