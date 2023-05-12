@@ -15,16 +15,8 @@ function NavBar({ hidden }) {
   const music_mode = useSelector(musicmodeC);
   const audioRef = useRef();
 
-  setTimeout(() => {
-    audioRef.current.play();
-  }, 5000);
-
   useEffect(() => {
-    console.log("in case");
-    if (music_mode === false) {
-      audioRef.current.pause();
-    }
-    music_mode === true ? audioRef.current.play() : audioRef.current.pause();
+    music_mode === true ? audioRef.current.play() : "";
   }, [music_mode]);
 
   useEffect(() => {
@@ -43,12 +35,17 @@ function NavBar({ hidden }) {
         darklight ? "shadow-cyan-500/50" : ""
       }   flex flex-row items-center justify-between  z-[999] `}
     >
-      <audio
-        ref={audioRef}
-        src="https://dl.sndup.net/gdwh/dontwake.mp3"
-        loop
-        autoPlay
-      />
+      {" "}
+      {music_mode === true ? (
+        <audio
+          ref={audioRef}
+          src="https://dl.sndup.net/gdwh/dontwake.mp3"
+          loop
+          autoPlay
+        />
+      ) : (
+        ""
+      )}
       <Link
         to={"/"}
         className="w-[50px] 800:w-[65px] z-[999] h-auto animate-Fastspin   frc ml-[10px] 500:ml-[20px] cursor-pointer hover:animate-slowspin overflow-hidden"
