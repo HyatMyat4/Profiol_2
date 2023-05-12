@@ -17,7 +17,7 @@ function NavBar({ hidden }) {
 
   useEffect(() => {
     music_mode === true ? audioRef.current.play() : audioRef.current.pause();
-  }, [music_mode, musicmodeC]);
+  }, [music_mode]);
 
   useEffect(() => {
     if (window !== undefined) {
