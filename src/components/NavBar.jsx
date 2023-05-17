@@ -197,5 +197,12 @@ function NavBar({ hidden }) {
 export default NavBar;
 
 /*
-
+Next js 13 beta with Fullstack Project  
+Conatin : Htm , Css , Tailwind Css , React , Redux , TypeScript , Next js  13 beta ,Node js , Express js , Web hook ,Real world Payments System Stripe , Postgersql , Fire Store
+မတင်တာကြာလိုပြန်တင်ကြတာပါ🥹🥹
+Frontend : https://github.com/HyatMyat4/nike_store.git
+Backend : https://github.com/HyatMyat4/Nike_Backend.git
+Profiol : https://htet-myat.onrender.com/
+GitProfile : https://github.com/HyatMyat4
+Thanks For  Watching 🔥💗💛💚💙💜🤎🖤
   */
