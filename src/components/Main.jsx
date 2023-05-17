@@ -58,7 +58,7 @@ function Main() {
               <span className=" text-cyan-400 ">Dart</span> ,{" "}
               <span className=" text-sky-400">Flutter</span> .
             </p>
-            <div className="px-[35px] py-[12px] border hover:scale-110 transition-all duration-75 cursor-pointer border-teal-400 mt-[30px] rfc justify-center   rounded-[5px]">
+            <div className="px-[35px] select-none py-[12px] border hover:scale-110 transition-all duration-75 cursor-pointer border-teal-400 mt-[30px] rfc justify-center   rounded-[5px]">
               <a href="/resume.pdf" className=" text-teal-400">
                 Resume
               </a>
