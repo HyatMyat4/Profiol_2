@@ -1,9 +1,15 @@
 import React from "react";
 import { VscGithubAlt } from "react-icons/vsc";
-import { BsBoxArrowUpRight, BsGear } from "react-icons/bs";
+import { BsBoxArrowUpRight, BsGear, BsLaptop } from "react-icons/bs";
 import { HiOutlineExclamation } from "react-icons/hi";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { MdOutlineWebhook } from "react-icons/md";
 import { GoMarkGithub } from "react-icons/go";
-import { Projectdata } from "../constants/index";
+import {
+  Projectdata,
+  Mobile_Project,
+  Desktop_Project,
+} from "../constants/index";
 import { darkmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -13,6 +19,7 @@ import { useState } from "react";
 function Project() {
   const darklight = useSelector(darkmodeC);
   const [colourData, setcolourData] = useState("#2DD4BF");
+  const [App, setApp] = useState("WebApp");
 
   function getRandomColor() {
     // Generate a random number between 0 and 255 for each RGB component
@@ -29,7 +36,7 @@ function Project() {
   }, 6000);
 
   return (
-    <div id="Projects" className="mt-[20px] 600:mt-0">
+    <div id="Projects" className="mt-[20px] fcc 600:mt-0">
       {Projectdata.map((data) => (
         <section
           id={data.PROJECT_SHORT_NAME}
@@ -41,14 +48,27 @@ function Project() {
               darklight ? "bg-[#1e2439]" : "bg-slate-200"
             }   rounded-[10px] shadow-lg `}
           >
-            <div className="w-[98%] h-auto m-auto  overflow-hidden pt-[10px]">
-              <img
-                src="/macbook.png"
-                className="w-[102%] h-auto m-auto  rounded-[5px]  "
-              />
-            </div>
+            {data.isMobile === true ? (
+              <div
+                className={` w-[98%] h-auto m-auto  overflow-hidden pt-[20px]`}
+              ></div>
+            ) : (
+              <div
+                className={` w-[98%] h-auto m-auto  overflow-hidden pt-[10px]`}
+              >
+                <img
+                  src="/macbook.png"
+                  className="w-[102%] h-auto m-auto  rounded-[5px]  "
+                />
+              </div>
+            )}
+
             <div className="w-[98%] h-auto rounded-[5px] relative group overflow-hidden  cursor-pointer  m-auto mb-[8px] ">
-              <div className="w-full h-full   translate-x-[290px]  absolute rotate-[-55deg]  hidden   group-hover:inline   ">
+              <div
+                className={` ${
+                  data.isMobile === true ? " hidden " : ""
+                }w-full h-full   translate-x-[290px]  absolute rotate-[-55deg]  hidden   group-hover:inline   `}
+              >
                 <div
                   className={`w-full h-full hidden 800:flex ${
                     darklight ? "bg-[#000000e2]" : "bg-slate-200"
@@ -177,10 +197,27 @@ function Project() {
                   </div>
                 </div>
               </div>
-              <img
-                src={data.PROJECT_IMG}
-                className=" rounded-bl-[8px] rounded-br-[8px] "
-              />
+              {data.isMobile === true ? (
+                <div className=" frc justify-around">
+                  <img
+                    src={data.PROJECT_IMG}
+                    className="w-[200px] h-auto   rounded-[8px] rounded-br-[8px] "
+                  />
+                  <img
+                    src={data.PROJECT_IMG2}
+                    className="w-[200px] h-auto rounded-[8px] mx-[5px] hidden 450:inline rounded-br-[8px] "
+                  />
+                  <img
+                    src={data.PROJECT_IMG3}
+                    className="w-[200px] h-auto rounded-[8px] rounded-br-[8px] hidden 690:inline "
+                  />
+                </div>
+              ) : (
+                <img
+                  src={data.PROJECT_IMG}
+                  className=" rounded-bl-[8px] rounded-br-[8px] "
+                />
+              )}
             </div>
             <div className="p-[20px] pt-[10px] ">
               <span className=" animate-slideleft2  text-[16px] 550:text-[18px] 800:text-[20px] monospace text-teal-400">
@@ -219,7 +256,7 @@ function Project() {
                   />
                   <div
                     id="monospace"
-                    className="ml-[10px] font-medium animate-pulse text-[12px] monospace "
+                    className="ml-[10px] font-medium hidden 450:inline animate-pulse text-[12px] monospace "
                   >
                     <Typewriter
                       words={["recommend watching the project video."]}

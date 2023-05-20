@@ -97,12 +97,73 @@ const experiences = [
   },
 ];
 
+const Mobile_Project = [];
+
+const Desktop_Project = [];
+
 const Projectdata = [
+  {
+    colour: "bg-[#EEEEEE]",
+    title: "Deliveroo Mobile App ( ReactNative + Type Script + Tailwinds css )",
+    company_name: "Frontend + Backend (React Native App)",
+    icon: "/favicon.png",
+    isMobile: true,
+    iconBg: "#E6DEDD",
+    PROJECT_SHORT_NAME: "DeliverooMobileApp",
+    PROJECT_NAME:
+      "Deliveroo Mobile App ( ReactNative + Type Script + Tailwinds css )",
+    PROJECT_IMG: "/deliveroo1.jpg",
+    PROJECT_IMG2: "/deliveroo2.jpg",
+    PROJECT_IMG3: "/deliveroo3.jpg",
+    js: "/js.png",
+    tailwind: "/tailwind.png",
+    mui: "",
+    react: "/react.png",
+    redux: "/redux.png",
+    icons: "",
+    pusher: "/postger.png",
+    nodejs: "/nodejs.png",
+    Express: "Express",
+    mongodb: "",
+    Firebase: "",
+    mysql: "",
+    postger: "",
+    prisma: "",
+    Nextjs: "",
+    Ts: "/ts.png",
+    Frontend_Repo_Link: "https://github.com/HyatMyat4/Deliveroo_Mobile.apk.git",
+    Backend_Repo_Link: "https://github.com/HyatMyat4/Deliveroo.git",
+    PROJECT_VIDEO: "AxQ_Eli8gtk",
+    LIVE_MODE: "",
+    PROJECT_TEXT:
+      "It My First ReactNative App So The have a lot of Bug!, Feature Conatin Google Auth UserCanOrder Remove Order And Containe ReactNativeMap Justlike Deliveroo   ",
+
+    USER_LANGUAGE_IMG: [
+      "/ts.png",
+      "/tailwind.png",
+      "https://cdn.worldvectorlogo.com/logos/react-1.svg",
+      "/redux.png",
+      "https://d4.alternativeto.net/R_1V_-fGcOKhBvZ8WmsemEDDh9doSDY_AJSDB3qzNQk/rs:fill:280:280:0/g:ce:0:0/YWJzOi8vZGlzdC9pY29ucy9oZXJvaWNvbnNfMjEyNTIwLnBuZw.png",
+      "/nodejs.png",
+      "Express",
+      "/postger.png",
+    ],
+    langauge_Frontend: [
+      "Java Script",
+      "React Native",
+      "Redux",
+      "TailwindCss",
+      "Heros-icons",
+      "Type Script",
+    ],
+    langauge_Backend: ["Node js", "Express Js", "Google Auth", "Postger Sql"],
+  },
   {
     colour: "bg-[#EEEEEE]",
     title: "Shoe Ecommerce & AdminDashboard",
     company_name: "Full Stack (Responsive Web App)",
     icon: "/favicon.png",
+    isMobile: false,
     iconBg: "#E6DEDD",
     PROJECT_SHORT_NAME: "FullStackShoeEcommerce&AdminDashboard",
     PROJECT_NAME: "Shoe Ecommerce & AdminDashboard (Responsive Web App)",
@@ -171,6 +232,7 @@ const Projectdata = [
     company_name: "Full Stack (Responsive Web App)",
     icon: "/favicon.png",
     iconBg: "#E6DEDD",
+    isMobile: false,
     PROJECT_SHORT_NAME: "FullStackShoeEcommerce&AdminDashboard",
     PROJECT_NAME: "Shoe Ecommerce & AdminDashboard (Responsive Web App)",
     PROJECT_IMG: "/nikefrontend.png",
@@ -238,6 +300,7 @@ const Projectdata = [
     company_name: "Full Stack (Responsive Web App)",
     icon: "/grape.png",
     iconBg: "#383E56",
+    isMobile: false,
     PROJECT_SHORT_NAME: "FullStackSocalMedia",
     PROJECT_NAME: "Full Stack SocalMedia (Responsive Web App)",
     PROJECT_IMG: "/project2.png",
@@ -291,6 +354,7 @@ const Projectdata = [
     company_name: "Full Stack (Responsive Web App)",
     icon: "/food.png",
     iconBg: "#E6DEDD",
+    isMobile: false,
     PROJECT_SHORT_NAME: "FullStackFoodOrder&AdminDashboard",
     PROJECT_NAME: "FullStackFood Order & AdminDashboard (Responsive Web App)",
     PROJECT_IMG: "/FoodDashboard.png",
@@ -357,6 +421,7 @@ const Projectdata = [
     company_name: "Full Stack (Responsive Web App)",
     icon: "/food.png",
     iconBg: "#E6DEDD",
+    isMobile: false,
     PROJECT_SHORT_NAME: "FullStackFoodOrder&AdminDashboard",
     PROJECT_NAME: "FullStackFood Order & AdminDashboard (Responsive Web App)",
     PROJECT_IMG: "/pj2.png",
@@ -423,6 +488,7 @@ const Projectdata = [
     company_name: "Full Stack (Responsive Web App)",
     icon: "/chatgpt.png",
     iconBg: "#E6DEDD",
+    isMobile: false,
     PROJECT_SHORT_NAME: "AI ChatGPT Fake",
     PROJECT_NAME: "AI ChatGPT Fullstack (Responsive Web App)",
     PROJECT_IMG: "/gpt.png",
@@ -475,6 +541,7 @@ const Projectdata = [
     company_name: "Frontend  (Responsive Web App) ",
     icon: "/apex.svg",
     iconBg: "#383E56",
+    isMobile: false,
     PROJECT_SHORT_NAME: "ApexLegnds.com_Clone",
     PROJECT_NAME: "ApexLegnds.com Clone (Responsive Web App)",
     PROJECT_IMG: "/pj3.png",
@@ -522,11 +589,11 @@ const Projectdata = [
 ];
 const OrderBy = [
   {
-    colour: "bg-[#444654]",
+    colour: "bg-[#E2E8F0]",
     title: "AI ChatGPT Fake",
     company_name: "Full Stack (Responsive Web App)",
     icon: "/favicon.png",
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     PROJECT_SHORT_NAME: "AI ChatGPT Fake",
     PROJECT_NAME: "AI ChatGPT Fullstack (Responsive Web App)",
     PROJECT_IMG: "/nikedashboard.png",
@@ -796,4 +863,11 @@ const OrderBy = [
   },
 ];
 
-export { services, experiences, Projectdata, OrderBy };
+export {
+  services,
+  experiences,
+  Projectdata,
+  OrderBy,
+  Mobile_Project,
+  Desktop_Project,
+};

@@ -77,3 +77,11 @@ function Main() {
 }
 
 export default Main;
+
+/*
+//Deliveroo Mobile App (ReactNative + Type Script + Tailwinds css)
+Backend (Ts + Node js + Express + Postgersql +  Prisma)
+Frontend : https://github.com/HyatMyat4/Deliveroo_Mobile.apk.git
+Backend : https://github.com/HyatMyat4/Deliveroo.git
+Thanks For watching 🔥💗💛💚💙💜🤎🖤
+*/

@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <section
       id="Skills"
-      className="w-full h-auto 400:h-[93vh]   frc  justify-center my-[40px]  400:my-0 "
+      className="w-full h-auto 400:h-[93vh]   frc  justify-center mb-[10px] 400:mb-[60px]  500:my-0 "
     >
       <div className="w-full h-full fcc  items-start justify-center">
         <div className="w-full h-[60px] flex flex-row items-center ">
