@@ -588,7 +588,7 @@ const OrderBy = [
     colour: "bg-[#EEEEEE]",
     title: "Deliveroo Mobile App ( ReactNative + Type Script + Tailwinds css )",
     company_name: "Frontend + Backend (React Native App)",
-    icon: "/favicon.png",
+    icon: "/deliveroo.png",
     isMobile: true,
     iconBg: "#E6DEDD",
     PROJECT_SHORT_NAME: "DeliverooMobileApp",
