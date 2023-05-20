@@ -5,11 +5,7 @@ import { HiOutlineExclamation } from "react-icons/hi";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { MdOutlineWebhook } from "react-icons/md";
 import { GoMarkGithub } from "react-icons/go";
-import {
-  Projectdata,
-  Mobile_Project,
-  Desktop_Project,
-} from "../constants/index";
+import { Projectdata } from "../constants/index";
 import { darkmodeC } from "../../setting/actionslice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
